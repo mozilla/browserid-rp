@@ -101,7 +101,7 @@ a:hover { border-bottom: 2px solid black ; }
         $("#oAssertion").empty().html(dumpObject(assertion));
 
         var url = "https://browserid.org/verify?assertion=" + window.encodeURIComponent(assertion) +
-                  "&audience=" + window.encodeURIComponent(window.host);
+                  "&audience=" + window.encodeURIComponent(window.location.host);
         $("#oVerificationRequest").empty().text(url);
 
         $.ajax({
