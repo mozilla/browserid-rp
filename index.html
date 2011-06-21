@@ -90,7 +90,7 @@ a:hover { border-bottom: 2px solid black ; }
           // Now we'll send this assertion over to the verification server for validation
           $("#oAssertion").empty().text(assertion);
 
-          var url = "http://browserid.org/verify?assertion=" + window.encodeURIComponent(assertion) +
+          var url = "https://browserid.org/verify?assertion=" + window.encodeURIComponent(assertion) +
                     "&audience=" + window.encodeURIComponent(window.location.host);
           $("#oVerificationRequest").empty().text(url);
 
